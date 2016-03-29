@@ -1,6 +1,6 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="session.*" %>
-<%@ page import="model.Group*" %>
+<%@ page import="model.GroupList*" %>
 
 <HTML>
 <HEAD>
