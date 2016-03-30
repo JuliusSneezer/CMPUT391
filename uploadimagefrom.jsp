@@ -4,6 +4,10 @@
 <head> 
     <title>Upload Images to Online Storage</title>
 <!--    <%@ page import="java.util.*" %>
+<<<<<<< HEAD
+=======
+    <%@ page import="java.sql.*" %>
+>>>>>>> e2aa7953d0d683a956554d436c24f29c0440d4d7
     <%
         // Encode the successful redirect
         String encodeUpload = response.encodeURL("/proj1/uploading/UploadImage");
