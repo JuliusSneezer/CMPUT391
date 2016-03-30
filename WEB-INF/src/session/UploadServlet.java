@@ -32,7 +32,7 @@ public class UploadServlet extends HttpServlet {
 	 	String subject = request.getParameter("SUBJECT");
 	  	String description = request.getParameter("DESCRIPTION");
 		String url= request.getParameter("DESCRIPTION");
-		int pic_id ; 
+		int pic_id; 
 
 
 
@@ -68,7 +68,7 @@ public class UploadServlet extends HttpServlet {
     			FileInputStream   fis = new FileInputStream(image);
     			stmt.setBinaryStream(3, fis, (int) image.length());
     			stmt.execute();
-				String sqlImage = "INSERT INTO images values(0, '" + owner_name + "', '" + permitted + "' , '" + subject + "', '" + location + "', '" + photodate + "','" + description + "','" + "empty_blob(), empty_blob()");
+				String sqlImage = "INSERT INTO images values(0, '" + owner_name + "', '" + permitted + "' , '" + subject + "', '" + location + "', '" + photodate + "','" + description + "','" + "empty_blob(), empty_blob())";
 				//String sqlPersons = "INSERT INTO images values('" + photo_id + "', '" + owner_name + "', '" +  + "', '" + address + "', '" + email + "', '" + phone + "');";
 			//Write the image to the blob object
 			OutputStream outstream = myblob.getBinaryOutputStream();

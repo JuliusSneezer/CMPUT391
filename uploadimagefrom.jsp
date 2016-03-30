@@ -4,8 +4,6 @@
 <head> 
     <title>Upload Images to Online Storage</title>
 <!--    <%@ page import="java.util.*" %>
-    <%@ page import="java.sql.*" %>
-    <%@include file="../util/dbLogin.jsp"%>
     <%
         // Encode the successful redirect
         String encodeUpload = response.encodeURL("/proj1/uploading/UploadImage");
@@ -48,8 +46,7 @@
             while (rset.next())
                 group_names.add(rset.getString("GROUP_NAME"));
         }
-    %>
-    <%@include file="../util/dbLogout.jsp"%>-->
+    %>-->
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <script src="//code.jquery.com/jquery-1.9.1.js"></script>
@@ -135,7 +132,8 @@
 				<TD>
 					<SELECT NAME='PERMITTED'>
 					<%
-						sql="SELECT group_name FROM groups g WHERE g.group_id=ANY"(SELECT gl.group_id FROM group_lists gl WHERE gl.friend_id = '" + user + "')";
+						int user = 0;
+						sql="SELECT group_name FROM groups g WHERE g.group_id=ANY(SELECT gl.group_id FROM group_lists gl WHERE gl.friend_id = "''" + user + "')'";
 						results.executeQuery(sql);
 						while(results.next()){
 							String group_name=results.getString("group_name");
